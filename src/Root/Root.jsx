@@ -8,12 +8,8 @@ import { Outlet } from 'react-router-dom';
 import "../styles.css";
 
 
-import Login from '../Pages/Login/Login';
-
-import Banner from '../Components/GetsbyStars';
-import Scroller from '../Components/Scroller';
 import Navbar from '../Components/Navbar';
-import GetsbyStars from '../Components/GetsbyStars';
+
 
 
 const Root = () => {

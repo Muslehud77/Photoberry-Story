@@ -1,0 +1,175 @@
+[
+   {
+      "id": 1,
+      "category": "wedding",
+      "title": "Wedding Bliss Elegant Garden Wedding",
+      "title_sm": "Wedding Bliss",
+      "thumbnail_img": "https://i.ibb.co/yd5D5L1/wedding-5.jpg",
+      "thumbnail_img2": "https://i.ibb.co/3y5xNg8/wedding-9.jpg",
+      "detail_img": [
+            "https://i.ibb.co/wJMN48g/wedding-1.jpg",
+            "https://i.ibb.co/NLgbC8b/wedding-3.jpg",
+            "https://i.ibb.co/VWxLpDk/wedding-4.jpg",
+            "https://i.ibb.co/yd5D5L1/wedding-5.jpg",
+            "https://i.ibb.co/0DnYYsC/wedding-7.jpg",
+            "https://i.ibb.co/jGnP5PZ/wedding-8.jpg",
+            "https://i.ibb.co/3y5xNg8/wedding-9.jpg",
+            "https://i.ibb.co/TWr87rX/wedding-6.jpg",
+            "https://i.ibb.co/1qXHT7B/wedding-2.jpg"
+      ],
+      "details": "Experience the magic of an enchanting garden wedding surrounded by lush greenery and blooming flowers. Our team will transform your dream wedding into reality, creating a romantic and memorable atmosphere for you and your guests. With personalized vows and a gourmet dining experience, your special day will be unforgettable.",
+      "pricing": "$15,000 - $25,000",
+      "special_services": [
+        "Customized Floral Arrangements",
+        "Live Music Entertainment",
+        "Professional Photography & Videography"
+      ]
+    },
+    {
+      "id": 2,
+      "category": "destination wedding",
+      "title": "Destination Dream Tropical Beach Wedding",
+      "title_sm": "Destination Dream",
+      "thumbnail_img": "https://i.ibb.co/3zrw5Mj/destination-1.jpg",
+      "thumbnail_img2": "https://i.ibb.co/pZ30JKn/destination-3.jpg",
+      "detail_img": [
+        "https://i.ibb.co/3zrw5Mj/destination-1.jpg",
+        "https://i.ibb.co/k84GVQd/destination-1.jpg",
+        "https://i.ibb.co/wCr4tfM/destination-1.png",
+        "https://i.ibb.co/r6NRq7P/destination-1.webp",
+        "https://i.ibb.co/YkFBMsV/destination-2.jpg",
+        "https://i.ibb.co/pZ30JKn/destination-3.jpg",
+        "https://i.ibb.co/nmSN0m9/destination-4.jpg",
+        "https://i.ibb.co/HzrCRfp/destination-6.jpg"
+      ],
+      "details": "Escape to a breathtaking tropical beach paradise for your destination wedding. Say 'I do' with the sound of gentle waves and a stunning sunset as your backdrop. Our team will handle all the logistics, from travel arrangements to beachfront decorations, ensuring a stress-free and romantic celebration.",
+      "pricing": "$20,000 - $30,000",
+      "special_services": [
+        "Beachfront Ceremony Setup",
+        "Catering with Local Cuisine",
+        "Private Island Excursion for Guests"
+      ]
+    },
+    {
+      "id": 3,
+      "category": "engagement",
+      "title": "Engagement Magic Romantic Rooftop Proposal",
+      "title_sm": "Engagement Magic",
+      "thumbnail_img": "https://i.ibb.co/tbDwYzD/e2.jpg",
+      "thumbnail_img2": "https://i.ibb.co/nRTxYk5/engagement-1.jpg",
+      "detail_img": [
+        "https://i.ibb.co/tbDwYzD/e2.jpg",
+        "https://i.ibb.co/nRTxYk5/engagement-1.jpg",
+        "https://i.ibb.co/ZT9g8cN/engagement-2.jpg",
+        "https://i.ibb.co/ZHG1yjK/engagement-3.jpg",
+        "https://i.ibb.co/fvqTs4K/engagement-5.jpg",
+        "https://i.ibb.co/tP6wLH2/engagement-6.jpg",
+        "https://i.ibb.co/Tg5s4kg/e.jpg"
+      ],
+      "details": "Make your engagement unforgettable with a romantic rooftop proposal overlooking the city skyline. Our team will create a magical atmosphere with fairy lights and candlelit ambiance. This moment will be captured forever by our professional photographers.",
+      "pricing": "$1,500 - $3,000",
+      "special_services": [
+        "Rooftop Venue Reservation",
+        "Personalized Proposal Planning",
+        "Photography & Videography Package"
+      ]
+    },
+    {
+      "id": 4,
+      "category": "birthday",
+      "title": "Birthday Bash Wild Safari Adventure",
+       "title_sm": "Birthday Bash",
+      "thumbnail_img": "https://i.ibb.co/JRG34HQ/birthday-2.jpg",
+      "thumbnail_img2": "https://i.ibb.co/02dS2nV/birthday-3.jpg",
+      "detail_img": [
+
+        "https://i.ibb.co/JRG34HQ/birthday-2.jpg",
+        "https://i.ibb.co/CHNMDHX/birthday-5.jpg",
+        "https://i.ibb.co/LdRzF5W/birthday.jpg",
+        "https://i.ibb.co/02dS2nV/birthday-3.jpg",
+        "https://i.ibb.co/vzsKqpd/birthday-6.jpg",
+        "https://i.ibb.co/WfNx6P3/birthday-7.jpg",
+        "https://i.ibb.co/jTxNymY/birthday-4.jpg"
+      ],
+      "details": "Celebrate your child's birthday with a wild safari adventure. Our team will transform your backyard into a jungle filled with fun and excitement. The kids will enjoy animal encounters, jungle-themed games, and a delicious safari-themed cake.",
+      "pricing": "$800 - $1,500",
+      "special_services": [
+        "Jungle Decoration & Props",
+        "Animal Encounter Show",
+        "Custom Safari Cake"
+      ]
+    },
+    {
+      "id": 5,
+      "category": "retirement",
+      "title": "Retirement Voyage Cruise Celebration",
+      "title_sm": "Retirement Voyage ",
+      "thumbnail_img": "https://i.ibb.co/NsCx5HL/Retirement-7.webp",
+      "thumbnail_img2":  "https://i.ibb.co/VjmTHrW/Retirement-1.jpg",
+      "detail_img": [
+        "https://i.ibb.co/VjmTHrW/Retirement-1.jpg",
+        "https://i.ibb.co/qNbzmk5/Retirement-2.jpg",
+        "https://i.ibb.co/2Y8TDQv/Retirement-3.jpg",
+        "https://i.ibb.co/kSBGZ1D/Retirement-4.jpg",
+        "https://i.ibb.co/TPB4b93/Retirement-6.jpg",
+        "https://i.ibb.co/DwPP4g5/Retirement-5.jpg",
+        "https://i.ibb.co/NsCx5HL/Retirement-7.webp"
+      ],
+      "details": "Sail into retirement with a memorable cruise celebration. Our team will plan a luxury cruise experience with gourmet dining, live entertainment, and a farewell party on deck. It's the perfect way to begin your retirement journey.",
+      "pricing": "$5,000 - $10,000",
+      "special_services": [
+        "Luxury Cruise Booking",
+        "Farewell Party Planning",
+        "Onboard Entertainment"
+      ]
+    },
+    {
+      "id": 6,
+      "category": "baby shower",
+      "title": "Baby Shower Bliss Vintage Tea Party",
+      "title_sm": "Baby Shower",
+      "thumbnail_img": "https://i.ibb.co/HrnN1Bh/babyshower-6.jpg",
+      "thumbnail_img2": "https://i.ibb.co/f49x0kv/babyshower-7.jpg",
+      "detail_img": [
+            "https://i.ibb.co/HGSmH3W/babyshower-1.jpg",
+            "https://i.ibb.co/ftD5Qn6/babyshower-2.jpg",
+            "https://i.ibb.co/kcXBWMF/babyshower-3.jpg",
+            "https://i.ibb.co/B4cm958/babyshower-4.jpg",
+            "https://i.ibb.co/LPpyHc8/babyshower-5.jpg",
+            "https://i.ibb.co/HrnN1Bh/babyshower-6.jpg",
+            "https://i.ibb.co/f49x0kv/babyshower-7.jpg",
+            "https://i.ibb.co/JpTdsVv/babyshower-1.webp"
+      ],
+      "details": "Celebrate the upcoming arrival of your little one with a vintage tea party baby shower. Our team will create a charming atmosphere with floral decorations, delicious tea and pastries, and fun baby-themed games. It's a delightful way to welcome your new addition.",
+      "pricing": "$600 - $1,200",
+      "special_services": [
+        "Vintage Tea Party Setup",
+        "Customized Baby Shower Favors",
+        "Baby-Themed Games & Activities"
+      ]
+    },
+    {
+      "id": 7,
+      "category": "anniversary",
+      "title": "Anniversary Celebration Romantic Dinner",
+      "title_sm": "Anniversary Celebration",
+      "thumbnail_img": "https://i.ibb.co/cX4z8jW/anniversay-6.jpg",
+      "thumbnail_img2": "https://i.ibb.co/xm1rZ7d/anniversay-3.jpg",
+      "detail_img": [
+        "https://i.ibb.co/9GMx2LY/anniversay-1.jpg",
+        "https://i.ibb.co/VWP4VT4/anniversay-2.jpg",
+        "https://i.ibb.co/xm1rZ7d/anniversay-3.jpg",
+        "https://i.ibb.co/nrqqksr/anniversay-4.jpg",
+        "https://i.ibb.co/0BW62vR/anniversay-5.jpg",
+        "https://i.ibb.co/cX4z8jW/anniversay-6.jpg",
+        "https://i.ibb.co/YXphwCY/anniversay-7.jpg"
+      ],
+      "details": "Celebrate your milestone anniversary with a romantic dinner for two. Our team will create an intimate setting with candlelight, live music, and a gourmet meal that will rekindle your love and create lasting memories.",
+      "pricing": "$500 - $1,000",
+      "special_services": [
+        "Private Dinner Reservation",
+        "Live Music Performance",
+        "Customized Anniversary Cake"
+      ]
+    }
+]

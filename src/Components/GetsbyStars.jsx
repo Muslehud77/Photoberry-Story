@@ -16,11 +16,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import "swiper/css/effect-fade";
 import "./styles.css";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import {EffectFade, Autoplay, Pagination, Navigation } from "swiper/modules";
 
 
 export default function GetsbyStars() {
@@ -43,13 +43,14 @@ export default function GetsbyStars() {
           <>
             <Swiper
               spaceBetween={0}
-              centeredSlides={true}
+              
+              effect={"fade"}
               autoplay={{
                 delay: 3500,
                 disableOnInteraction: false,
               }}
               navigation={false}
-              modules={[Autoplay, Pagination, Navigation]}
+              modules={[EffectFade, Autoplay, Pagination, Navigation]}
               className="mySwiper"
             >
               <SwiperSlide>

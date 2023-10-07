@@ -2,6 +2,18 @@ import * as THREE from "three";
 import { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 
+import wedding from "../Assets/wedding-1.jpg";
+import wedding2 from "../Assets/wedding-3.jpg";
+import wedding3 from "../Assets/wedding-4.jpg";
+import wedding4 from "../Assets/wedding-6.jpg";
+import wedding5 from "../Assets/wedding-7.jpg";
+import wedding6 from "../Assets/wedding-8.jpg";
+
+
+
+
+
+
 import {
   Preload,
   ScrollControls,
@@ -51,32 +63,20 @@ function Images() {
   });
   return (
     <group ref={group}>
-      <Image
-        position={[-2, 0, 0]}
-        scale={[4, height, 1]}
-        url=''
-      />
-      <Image position={[2, 0, 1]} scale={3} url='' />
-      <Image
-        position={[-2.3, -height, 2]}
-        scale={[1, 3, 1]}
-        url=''
-      />
-      <Image
-        position={[-0.6, -height, 3]}
-        scale={[1, 2, 1]}
-        url=''
-      />
-      <Image position={[0.75, -height, 3.5]} scale={1.5} url='' />
+      <Image position={[-2, 0, 0]} scale={[4, height, 1]} url={wedding} />
+      <Image position={[2, 0, 1]} scale={3} url={wedding2} />
+      <Image position={[-2.3, -height, 2]} scale={[1, 3, 1]} url={wedding2} />
+      <Image position={[-0.6, -height, 3]} scale={[1, 2, 1]} url={wedding5} />
+      <Image position={[0.75, -height, 3.5]} scale={1.5} url={wedding6} />
       <Image
         position={[0, -height * 1.5, 2.5]}
         scale={[1.5, 3, 1]}
-        url=''
+        url={wedding3}
       />
       <Image
         position={[0, -height * 2 - height / 4, 0]}
         scale={[width, height / 2, 1]}
-        url=''
+        url={wedding4}
       />
     </group>
   );
@@ -84,43 +84,42 @@ function Images() {
 
 export default function Scroller() {
   return (
-    <dir className="h-screen w-full">
-      <Canvas gl={{ antialias: false }} dpr={[1, 1.5]}>
+    <div className="h-screen relative w-full mt-10">
+      <Canvas gl={{ antialias: false }} dpr={[1, 2]}>
         <Suspense fallback={null}>
-          <ScrollControls damping={4} pages={3}>
+          <ScrollControls damping={1} pages={3}>
             <Scroll>
               <Images />
             </Scroll>
             <Scroll html>
               <h1
-                className="text-5xl font-bold"
+                className="text-9xl font-bold"
                 style={{ position: "absolute", top: "60vh", left: "0.5em" }}
               >
-                Stay
+                Love
               </h1>
               <h1
-                className="text-5xl font-bold"
+                className="text-9xl font-bold"
                 style={{ position: "absolute", top: "120vh", left: "60vw" }}
               >
-                With
+                Plan
               </h1>
-              <div>
-                <h1
-                  style={{
-                    position: "absolute",
-                    top: "198.5vh",
-                    left: "30vw",
-                    fontSize: "40vw",
-                  }}
-                >
-                  Us
-                </h1>
-              </div>
+              <h1
+              className="text-gray-100"
+                style={{
+                  position: "absolute",
+                  top: "215vh",
+                  left: "0.5vw",
+                  fontSize: "20vw",
+                }}
+              >
+              Celebrate
+              </h1>
             </Scroll>
           </ScrollControls>
           <Preload />
         </Suspense>
       </Canvas>
-    </dir>
+    </div>
   );
 }
