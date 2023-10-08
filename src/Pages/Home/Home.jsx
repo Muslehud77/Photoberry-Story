@@ -1,9 +1,13 @@
 
 
 import { useLoaderData } from 'react-router-dom';
-import GetsbyStars from '../../Components/GetsbyStars';
-import Scroller from '../../Components/Scroller';
-import Slider from '../../Components/Slider/Slider';
+import GetsbyStars from './GetsbyStars';
+import Slider from './Slider';
+import Scroller from './Scroller';
+import AboutUs from './AboutUs';
+import WorkFlow from './WorkFlow';
+import Services from './Services';
+
 
 const Home = () => {
 
@@ -14,8 +18,10 @@ const Home = () => {
     return (
       <div>
         <GetsbyStars></GetsbyStars>
-        <Slider ev={events}></Slider>
+        <AboutUs></AboutUs>
         <Scroller></Scroller>
+        <WorkFlow ev={events}></WorkFlow>
+        <Services ev={events}></Services>
       </div>
     );
 };

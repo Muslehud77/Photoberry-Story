@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        xing: "Great Vibes"
+        xing: "Dancing Script ,cursive",
+        vibes: " Great Vibes, cursive",
       },
     },
   },

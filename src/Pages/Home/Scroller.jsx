@@ -2,12 +2,12 @@ import * as THREE from "three";
 import { Suspense, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 
-import wedding from "../Assets/wedding-1.jpg";
-import wedding2 from "../Assets/wedding-3.jpg";
-import wedding3 from "../Assets/wedding-4.jpg";
-import wedding4 from "../Assets/wedding-6.jpg";
-import wedding5 from "../Assets/wedding-7.jpg";
-import wedding6 from "../Assets/wedding-8.jpg";
+import wedding from "../../Assets/wedding-1.jpg";
+import wedding2 from "../../Assets/wedding-3.jpg";
+import wedding3 from "../../Assets/wedding-4.jpg";
+import wedding4 from "../../Assets/wedding-6.jpg";
+import wedding5 from "../../Assets/wedding-7.jpg";
+import wedding6 from "../../Assets/wedding-8.jpg";
 
 
 
@@ -15,6 +15,7 @@ import wedding6 from "../Assets/wedding-8.jpg";
 
 
 import {
+  
   Preload,
   ScrollControls,
   Scroll,
@@ -84,28 +85,28 @@ function Images() {
 
 export default function Scroller() {
   return (
-    <div className="h-screen relative w-full mt-10">
+    <div className="h-screen relative w-full">
       <Canvas gl={{ antialias: false }} dpr={[1, 2]}>
         <Suspense fallback={null}>
           <ScrollControls damping={1} pages={3}>
             <Scroll>
               <Images />
             </Scroll>
-            <Scroll html>
+            <Scroll className="font-vibes" html>
               <h1
-                className="text-9xl font-bold"
+                className="text-9xl p-5 text-transparent bg-clip-text bg-gradient-to-tr from-[#F8D17C] to-yellow-700 font-bold"
                 style={{ position: "absolute", top: "60vh", left: "0.5em" }}
               >
                 Love
               </h1>
               <h1
-                className="text-9xl font-bold"
+                className="text-9xl p-5 text-transparent bg-clip-text bg-gradient-to-tr from-[#F8D17C] to-yellow-700 font-bold"
                 style={{ position: "absolute", top: "120vh", left: "60vw" }}
               >
                 Plan
               </h1>
               <h1
-              className="text-gray-100"
+                className="p-5 text-transparent bg-clip-text bg-gradient-to-tr from-[#F8D17C] to-yellow-700"
                 style={{
                   position: "absolute",
                   top: "215vh",
@@ -113,7 +114,7 @@ export default function Scroller() {
                   fontSize: "20vw",
                 }}
               >
-              Celebrate
+                Celebrate
               </h1>
             </Scroll>
           </ScrollControls>

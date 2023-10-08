@@ -2,13 +2,13 @@ import { useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
-import wedding from "../Assets/wedding-1.jpg";
-import wedding2 from "../Assets/wedding-3.jpg";
-import wedding3 from "../Assets/wedding-4.jpg";
-import wedding4 from "../Assets/wedding-6.jpg";
-import wedding5 from "../Assets/wedding-7.jpg";
-import wedding6 from "../Assets/wedding-8.jpg";
-import logo from '../Assets/Logo/Photoberry Golden 2.png'
+import wedding from "../../Assets/wedding-1.jpg";
+import wedding2 from "../../Assets/wedding-3.jpg";
+import wedding3 from "../../Assets/wedding-4.jpg";
+import wedding4 from "../../Assets/wedding-6.jpg";
+import wedding5 from "../../Assets/wedding-7.jpg";
+import wedding6 from "../../Assets/wedding-8.jpg";
+import logo from '../../Assets/Logo/Photoberry Golden 2.png'
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -43,7 +43,6 @@ export default function GetsbyStars() {
           <>
             <Swiper
               spaceBetween={0}
-              
               effect={"fade"}
               autoplay={{
                 delay: 3500,
@@ -54,85 +53,85 @@ export default function GetsbyStars() {
               className="mySwiper"
             >
               <SwiperSlide>
-                <div className="bg-black w-full opacity-80">
+                <div className="bg-black w-full h-screen opacity-80">
                   <img
                     src={wedding}
-                    className="opacity-50 w-full  object-cover"
+                    className="opacity-50 h-screen w-full  object-cover"
                     alt=""
                   />
                 </div>
-                <div className=" bottom-32 w-full text-center absolute">
-                  <h1 className="text-7xl text-transparent bg-clip-text bg-gradient-to-tr from-[#F8D17C] to-yellow-600 font-normal font-xing">
+                <div className=" bottom-24 w-full text-center absolute">
+                  <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Your Dream Event, Our Expertise
                   </h1>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="bg-black w-full opacity-80">
+                <div className="bg-black w-full h-screen opacity-80">
                   <img
                     src={wedding2}
-                    className="opacity-50 w-full  object-cover"
+                    className="opacity-50 h-screen w-full  object-cover"
                     alt=""
                   />
                 </div>
-                <div className=" bottom-32 w-full text-center absolute">
-                  <h1 className="text-7xl text-transparent bg-clip-text bg-gradient-to-tr from-[#F8D17C] to-yellow-600 font-normal font-xing">
+                <div className=" bottom-24 w-full text-center absolute">
+                  <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Turning Visions into Reality
                   </h1>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="bg-black w-full opacity-80">
+                <div className="bg-black w-full h-screen opacity-80">
                   <img
                     src={wedding3}
-                    className="opacity-50 w-full  object-cover"
+                    className="opacity-50 h-screen w-full  object-cover"
                     alt=""
                   />
                 </div>
-                <div className=" bottom-32 w-full text-center absolute">
-                  <h1 className="text-7xl text-transparent bg-clip-text bg-gradient-to-tr from-[#F8D17C] to-yellow-600 font-normal font-xing">
+                <div className=" bottom-24 w-full text-center absolute">
+                  <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Crafting Memories, One Event at a Time
                   </h1>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="bg-black w-full opacity-80">
+                <div className="bg-black w-full h-screen opacity-80">
                   <img
                     src={wedding4}
-                    className="opacity-50 w-full  object-cover"
+                    className="opacity-50 h-screen w-full  object-cover"
                     alt=""
                   />
                 </div>
-                <div className=" bottom-32 w-full text-center absolute">
-                  <h1 className="text-7xl text-transparent bg-clip-text bg-gradient-to-tr from-[#F8D17C] to-yellow-600 font-normal font-xing">
+                <div className=" bottom-24 w-full text-center absolute">
+                  <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Elevate Your Celebrations
                   </h1>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="bg-black w-full opacity-80">
+                <div className="bg-black w-full h-screen opacity-80">
                   <img
                     src={wedding5}
-                    className="opacity-50 w-full  object-cover"
+                    className="opacity-50 h-screen w-full  object-cover"
                     alt=""
                   />
                 </div>
-                <div className=" bottom-32 w-full text-center absolute">
-                  <h1 className="text-7xl text-transparent bg-clip-text bg-gradient-to-tr from-[#F8D17C] to-yellow-600 font-normal font-xing">
+                <div className=" bottom-24 w-full text-center absolute">
+                  <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Exceptional Events, Extraordinary Memories
                   </h1>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="bg-black w-full opacity-80">
+                <div className="bg-black w-full h-screen opacity-80">
                   <img
                     src={wedding6}
-                    className="opacity-50 w-full  object-cover"
+                    className="opacity-50 h-screen w-full  object-cover"
                     alt=""
                   />
                 </div>
-                <div className=" bottom-32 w-full text-center absolute">
-                  <h1 className="text-7xl text-transparent bg-clip-text bg-gradient-to-tr from-[#F8D17C] to-yellow-600 font-normal font-xing">
+                <div className=" bottom-24 w-full text-center absolute">
+                  <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Turning Moments into Masterpieces
                   </h1>
                 </div>
@@ -141,6 +140,7 @@ export default function GetsbyStars() {
           </>
         </div>
       </div>
+    
     </div>
   );
 }

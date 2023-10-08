@@ -1,15 +1,14 @@
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import PropTypes from "prop-types";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards";
 
 import "./silder.css";
 
-// import required modules
-import { EffectCards, Autoplay } from "swiper/modules";
+
+import {Mousewheel, EffectCards, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
 
 export default function Slider({ ev }) {
@@ -20,9 +19,9 @@ export default function Slider({ ev }) {
     <>
       <Swiper
         effect={"cards"}
-        grabCursor={true}
-        modules={[EffectCards, Autoplay]}
-        className="mySwiper2 "
+        mousewheel={true}
+        modules={[EffectCards, Mousewheel, Autoplay]}
+        className="mySwiper2"
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
@@ -31,7 +30,7 @@ export default function Slider({ ev }) {
         {ev.map((e) => (
           <SwiperSlide key={e.id} className="swiper-slide1">
             <img className="" src={e.thumbnail_img} alt="" />
-            <h4 className="absolute text-2xl font-bold font-xing text-stroke-3 text-white pt-52">
+            <h4 className="absolute text-3xl shadow-sm p-2 w-full shadow-black font-extrabold text-stroke-3 text-yellow-500 bottom-10 rounded bg-black bg-opacity-50">
               {e.title_sm}
             </h4>
             <Link
@@ -44,3 +43,12 @@ export default function Slider({ ev }) {
     </>
   );
 }
+Slider.propTypes = {
+  ev: PropTypes.array,
+};
+
+
+
+
+
+

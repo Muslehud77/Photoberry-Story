@@ -1,7 +1,7 @@
 
 .mySwiper2{
-     width: 240px;
-  height: 320px;
+     width: 350px;
+  height: 450px;
 }
 
 .swiper-slide1 {
@@ -14,5 +14,7 @@
   position: relative;
 }
 .text-stroke-3 {
-    -webkit-text-stroke: 0.5px black;
+  
+    font-family: Great Vibes;
+   
 }
