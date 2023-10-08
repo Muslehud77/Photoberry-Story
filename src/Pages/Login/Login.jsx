@@ -1,14 +1,34 @@
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { AiFillFacebook } from "react-icons/ai";
+import { useContext, useEffect, useRef, useState } from "react";
+import { BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import bg from "../../Assets/Backgounds/blob-scene-haikei (2).svg";
+import { AuthContext } from "../../ConetextProvider/ContextProvider";
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+
+
+
+
+
 let imgs = []
+
+
+
+
+const Login = () => {
+  const images = useLoaderData()
+const { emailSignIn, googleSignIn, facebookSignIn } = useContext(AuthContext);
+const navigate = useNavigate()
+const [show, setShow] = useState(false);
+
+
+
+  imgs = images
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  
+
   // const email = e.target.email.value;
   // const password = e.target.password.value;
 
@@ -17,15 +37,23 @@ const handleSubmit = (e) => {
   const email = form.get("email");
   const password = form.get("password");
 
-  
+  emailSignIn(email, password)
+  .then(res=> {
+    console.log(res.user)
+    navigate('/')
+  })
+  .catch(err=> {
+    console.log(err)
+  })
+
 };
 
+const socialLogin = (media) => {
+  media()
+  navigate('/')
+}
 
 
-const Login = () => {
-  const images = useLoaderData()
-
-  imgs = images
 
   return (
     <section className="w-full relative bg-black bg-opacity-60 px-8 py-20 grid grid-cols-1 md:grid-cols-2 items-center gap-8 ">
@@ -43,13 +71,24 @@ const Login = () => {
               className="input input-bordered w-full bg-gray-100"
             />
             <p className="font-semibold">Password</p>
-            <input
-              required
-              type="password"
-              name="password"
-              placeholder="Enter your password"
-              className="input input-bordered w-full bg-gray-100"
-            />
+            <div className="relative">
+              <input
+                id="password"
+                required
+                type={`${show ? "text" : "password"}`}
+                name="password"
+                placeholder="Password "
+                className="input input-bordered w-full bg-gray-100 text-black"
+              />
+              <div
+                className="hover:cursor-pointer absolute right-3 bottom-3 text-black text-xl"
+                onClick={() => {
+                  setShow(!show);
+                }}
+              >
+                {!show ? <AiFillEyeInvisible /> : <AiFillEye />}
+              </div>
+            </div>
             <div className="space-y-8">
               <input
                 type="submit"
@@ -76,12 +115,18 @@ const Login = () => {
               </div>
 
               <div className="space-y-2">
-                <button className="btn w-full btn-outline">
+                <button
+                  onClick={() => socialLogin(googleSignIn)}
+                  className="btn w-full btn-outline"
+                >
                   <FcGoogle className="text-2xl" /> continue with Google
                 </button>
-                <button className="btn w-full btn-outline">
+                <button
+                  onClick={() => socialLogin(facebookSignIn)}
+                  className="btn w-full btn-outline"
+                >
                   {" "}
-                  <AiFillFacebook className="text-2xl" /> continue with Facebook
+                  <BsFacebook className="text-2xl" /> continue with Facebook
                 </button>
               </div>
             </div>

@@ -34,7 +34,7 @@ const ServiceCard = ({event}) => {
               <div className="flex justify-center">
                 <hr className="border-1 border-black w-20" />
               </div>
-              <div className="space-y-1 bg-black bg-opacity-50 text-white py-2 rounded-xl">
+              <div className="space-y-1 mt-2 bg-black bg-opacity-50 text-white py-2 rounded-xl">
                 <div>
                   <h1 className=" uppercase font-thin tracking-wide">
                     Pricing

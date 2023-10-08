@@ -1,35 +1,90 @@
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { AiFillFacebook, AiFillGithub } from "react-icons/ai";
+import { useContext, useEffect, useRef, useState } from "react";
+import { BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import bg from "../../Assets/Backgounds/blob-scene-haikei (1).svg";
-
+import { AuthContext } from "../../ConetextProvider/ContextProvider";
+import { updateProfile } from "firebase/auth";
+import {AiFillEyeInvisible, AiFillEye} from 'react-icons/ai'
 
 
 let imgs = [];
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-
-  // const email = e.target.email.value;
-  // const password = e.target.password.value;
-
-  const form = new FormData(e.currentTarget);
-
-  const email = form.get("email");
-  const password = form.get("password");
-};
+const specialCharacter = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
 
 const Register = () => {
-  const images = useLoaderData();
+const images = useLoaderData();
+imgs = images;
+const navigate = useNavigate()
 
-  imgs = images;
+const { emailSignUp , googleSignIn , facebookSignIn } = useContext(AuthContext);
+const [show,setShow] = useState(false)
+const [err,setErr] = useState(null);
+
+
+  const handleSubmit = (e) => {
+   
+    e.preventDefault();
+    setErr(null)
+    // const email = e.target.email.value;
+    // const password = e.target.password.value;
+    const form = new FormData(e.currentTarget);
+    const displayName = form.get("name");
+    const photoURL = form.get("photoUrl");
+    const email = form.get("email");
+    const password = form.get("password");
+
+    if(password.length < 6) {
+       setErr('Password must be at least 6 characters!')
+        return;
+    }
+
+
+    if(!/[A-Z]/.test(password)){
+        setErr('Password must contain at least 1 upper case letter!')
+        return;
+    }
+
+    if(!specialCharacter.test(password)){
+         setErr("Password should have at least 1 special character!");
+        return;
+    }
+
+    if(!/\d/.test(password)){
+         setErr("Password must contain at least 1 number!");
+        return;
+    }
+    
+    emailSignUp(email, password)
+    .then(res=> {
+       updateProfile(res.user, {
+        displayName,photoURL
+       })
+       navigate('/')
+    })
+    .catch(err=> {
+        console.log(err)
+    })
+
+
+
+  };
+const socialSignUp = (media) => {
+    media()
+    .then(res=> {
+        console.log(res.user)
+        navigate("/")
+    })
+    .catch(err => {
+        console.log(err)
+    })
+}
+  
 
   return (
     <section className="relative bg-black  bg-opacity-60 py-20">
       <div>
-        <div className="max-w-md relative z-10  py-10 px-16 mx-auto space-y-8  bg-black text-white bg-opacity-50 backdrop-blur-md rounded-md">
+        <div className="max-w-md relative z-10  py-10 px-12 mx-auto space-y-8  bg-black text-white bg-opacity-50 backdrop-blur-md rounded-md">
           <h2 className="font-semibold text-3xl">Register Account</h2>
           <hr />
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -57,16 +112,36 @@ const Register = () => {
               className="input input-bordered w-full bg-gray-100 text-black"
             />
             <p className="font-semibold">Set Password</p>
-            <input
-              required
-              type="password"
-              name="password"
-              placeholder="Password must be at-least 6 characters"
-              className="input input-bordered w-full bg-gray-100 text-black"
-            />
+            <div className="relative">
+              <input
+                id="password"
+                required
+                type={`${show ? 'text' : 'password'}`}
+                name="password"
+                placeholder="Password must be at-least 6 characters"
+                className="input input-bordered w-full bg-gray-100 text-black"
+              />
+              <div
+                className="hover:cursor-pointer absolute right-3 bottom-3 text-black text-xl"
+                onClick={() => {setShow(!show)}}
+              >
+                {show ? <AiFillEyeInvisible /> : <AiFillEye />}
+              </div>
+            </div>
+            {err && (
+              <div className="text-red-500 rounded-lg p-2 bg-white font-serif font-light">
+                <p>{err}</p>
+              </div>
+            )}
             <div className="space-y-8">
               <div className="flex items-center gap-2">
-                <input required type="checkbox" className="checkbox checkbox-sm bg-white" name="" id="" />
+                <input
+                  required
+                  type="checkbox"
+                  className="checkbox checkbox-sm bg-white"
+                  name=""
+                  id=""
+                />
                 <label>
                   Accept{" "}
                   <a className="hover:underline" href="">
@@ -90,19 +165,29 @@ const Register = () => {
               </div>
 
               <div className="space-y-2">
-                <button className="btn w-full bg-white btn-outline">
+                <button
+                  onClick={() => socialSignUp(googleSignIn)}
+                  className="btn w-full bg-white btn-outline"
+                >
                   <FcGoogle className="text-2xl" /> SignUp with Google
                 </button>
-                <button className="btn w-full bg-white btn-outline">
+                <button
+                  onClick={() => socialSignUp(facebookSignIn)}
+                  className="btn w-full bg-white btn-outline"
+                >
                   {" "}
-                  <AiFillFacebook className="text-2xl" /> SignUp with Facebook
+                  <BsFacebook className="text-2xl" /> SignUp with Facebook
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <img className="absolute top-0 w-full h-full object-cover opacity-50" src={bg} alt="" />
+      <img
+        className="absolute top-0 w-full h-full object-cover opacity-50"
+        src={bg}
+        alt=""
+      />
     </section>
   );
 };
