@@ -26,9 +26,11 @@ const Services = ({ev}) => {
     console.log(ev)
 
     return (
-      <div>
+      <div className="my-10 space-y-10 container mx-auto">
         <div className="text-center">
-          <h1 className="text-5xl">Our Service Offerings'Diverse Spectrum</h1>
+          <h1 className="text-6xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] text-center font-serif">
+            Our Service Offerings Diverse Spectrum
+          </h1>
         </div>
         <Swiper
           className=""
@@ -36,7 +38,7 @@ const Services = ({ev}) => {
           centeredSlides={true}
           loop={true}
           slidesPerView={5}
-          mousewheel={true}
+          mousewheel={false}
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,

@@ -34,7 +34,7 @@ export default function Slider({ ev }) {
               {e.title_sm}
             </h4>
             <Link
-              to={`/details/${e.id}`}
+              to={`/category/${e.id}`}
               className="h-full bottom-0 absolute  w-full"
             ></Link>
           </SwiperSlide>

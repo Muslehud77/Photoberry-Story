@@ -19,9 +19,10 @@ const Home = () => {
       <div>
         <GetsbyStars></GetsbyStars>
         <AboutUs></AboutUs>
-        <Scroller></Scroller>
+
         <WorkFlow ev={events}></WorkFlow>
         <Services ev={events}></Services>
+        <Scroller></Scroller>
       </div>
     );
 };

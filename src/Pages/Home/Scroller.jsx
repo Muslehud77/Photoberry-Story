@@ -85,7 +85,7 @@ function Images() {
 
 export default function Scroller() {
   return (
-    <div className="h-screen relative w-full">
+    <div className="h-screen  relative w-full">
       <Canvas gl={{ antialias: false }} dpr={[1, 2]}>
         <Suspense fallback={null}>
           <ScrollControls damping={1} pages={3}>
@@ -100,17 +100,16 @@ export default function Scroller() {
                 Love
               </h1>
               <h1
-                className="text-9xl p-5 text-transparent bg-clip-text bg-gradient-to-tr from-[#F8D17C] to-yellow-700 font-bold"
-                style={{ position: "absolute", top: "120vh", left: "60vw" }}
+                className="text-9xl left-40 md:left-[150vh] p-5 text-transparent bg-clip-text bg-gradient-to-tr from-[#F8D17C] to-yellow-700 font-bold"
+                style={{ position: "absolute", top: "120vh" }}
               >
                 Plan
               </h1>
               <h1
-                className="p-5 text-transparent bg-clip-text bg-gradient-to-tr from-[#F8D17C] to-yellow-700"
+                className="p-5 md:top-[215vh] top-[235vh] left-[0.5vw] text-transparent bg-clip-text bg-gradient-to-tr from-[#F8D17C] to-yellow-700"
                 style={{
                   position: "absolute",
-                  top: "215vh",
-                  left: "0.5vw",
+               
                   fontSize: "20vw",
                 }}
               >

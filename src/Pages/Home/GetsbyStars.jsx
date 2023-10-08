@@ -34,8 +34,8 @@ export default function GetsbyStars() {
         </div>
 
         <div className="flex justify-center h-full items-center">
-          <div className="absolute z-20">
-            <img className="w-52" src={logo} alt="" />
+          <div className="-mt-52 md:mt-0 absolute z-20">
+            <img className="w-36 md:w-52" src={logo} alt="" />
           </div>
         </div>
 
