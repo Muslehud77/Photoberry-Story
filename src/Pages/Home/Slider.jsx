@@ -16,12 +16,12 @@ export default function Slider({ ev }) {
   
 
   return (
-    <>
+    <div className="">
       <Swiper
         effect={"cards"}
         mousewheel={true}
         modules={[EffectCards, Mousewheel, Autoplay]}
-        className="mySwiper2"
+        className="mySwiper2 w-[350px]"
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
@@ -40,7 +40,7 @@ export default function Slider({ ev }) {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 }
 Slider.propTypes = {

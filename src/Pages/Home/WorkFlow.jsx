@@ -6,7 +6,7 @@ const WorkFlow = ({ev}) => {
     return (
       <div className="relative bg-black bg-opacity-70  my-10">
         <div className="container relative z-10 mx-auto">
-          <div className="md:grid grid-cols-4 justify-center items-center py-10">
+          <div className="flex flex-col-reverse lg:grid grid-cols-4 justify-center items-center py-10">
             <div className="col-span-2">
               <div className="md:grid mb-20 grid-cols-2 text-center">
                 <div className="md:p-6 space-y-5 ">

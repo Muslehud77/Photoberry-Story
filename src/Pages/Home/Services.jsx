@@ -23,8 +23,7 @@ import ServiceCard from '../../Components/ServiceCard';
 
 const Services = ({ev}) => {
 
-    console.log(ev)
-
+ 
     return (
       <div className="my-10 space-y-10 container mx-auto">
         <div className="text-center">

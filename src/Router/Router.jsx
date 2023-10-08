@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import Details from "../Pages/Details/Details";
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,18 @@ const router = createBrowserRouter([
             <Register></Register>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/category/:id",
+        loader: async ({params}) => {
+          const response = await fetch("/events.json");
+          const data = await response.json();
+          
+          const category = data.find(event => event.id == params.id);
+
+          return category
+        },
+        element: <Details></Details>,
       },
     ],
   },
