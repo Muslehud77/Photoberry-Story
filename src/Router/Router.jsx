@@ -8,6 +8,8 @@ import Details from "../Pages/Details/Details";
 import PrivateRouteForOther from "./PrivateRouteForOther";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import Gallery from "../Pages/Gallery/Gallery";
+import Services from "../Pages/Services/Services";
+
 
 
 const router = createBrowserRouter([
@@ -19,6 +21,11 @@ const router = createBrowserRouter([
         path: "/",
         loader: () => fetch("/events.json"),
         element: <Home></Home>,
+      },
+      {
+        path: "/services",
+        loader: () => fetch("/events.json"),
+        element: <Services></Services>
       },
       {
         path: "/login",

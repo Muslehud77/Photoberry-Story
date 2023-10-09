@@ -1,7 +1,7 @@
 import logo from '../../Assets/Logo/Photoberry Golden 2.png'
 import { Link, useLoaderData } from 'react-router-dom';
 import Tiles from './Exicuter';
-import bg from "../../Assets/Backgounds/blob-scene-haikei (1).svg";
+
 const Details = () => {
     const event = useLoaderData()
 

@@ -44,6 +44,26 @@ export default function Navbar() {
           Home
         </NavLink>
         <NavLink
+          to="/services"
+          className={({ isActive, isPending }) =>
+            isActive
+              ? `btn bg-yellow-50 duration-500 ${
+                  pathname === "/contact"
+                    ? "text-black"
+                    : "text-white bg-opacity-30"
+                } border-none hover:text-black btn-sm capitalize`
+              : isPending
+              ? `btn btn-ghost ${
+                  pathname === "/contact" ? "text-black" : "text-white"
+                } duration-500 text-white btn-sm capitalize`
+              : `btn btn-ghost ${
+                  pathname === "/contact" ? "text-black" : "text-white"
+                } text-white duration-500 btn-sm capitalize`
+          }
+        >
+          Services
+        </NavLink>
+        <NavLink
           to="/gallery"
           className={({ isActive, isPending }) =>
             isActive
@@ -215,7 +235,7 @@ const {pathname} = useLocation()
             </div>
 
             <Disclosure.Panel className="sm:hidden">
-              <div className="space-y-1 px-2 pb-3 pt-2">{navigation}</div>
+              <div className="">{navigation}</div>
             </Disclosure.Panel>
           </>
         )}
