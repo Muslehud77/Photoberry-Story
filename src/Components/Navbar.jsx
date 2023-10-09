@@ -28,9 +28,7 @@ useEffect(() => {
     <>
       <div className="space-x-2">
         <NavLink
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1500"
+          
           to="/"
           className={({ isActive, isPending }) =>
             isActive
@@ -51,9 +49,7 @@ useEffect(() => {
           Home
         </NavLink>
         <NavLink
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1500"
+          
           to="/services"
           className={({ isActive, isPending }) =>
             isActive
@@ -74,9 +70,7 @@ useEffect(() => {
           Services
         </NavLink>
         <NavLink
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1500"
+         
           to="/gallery"
           className={({ isActive, isPending }) =>
             isActive
@@ -97,9 +91,7 @@ useEffect(() => {
           Gallery
         </NavLink>
         <NavLink
-          data-aos="fade-up"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
+        
           to="/contact"
           className={({ isActive, isPending }) =>
             isActive
