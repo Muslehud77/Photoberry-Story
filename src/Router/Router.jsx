@@ -9,6 +9,7 @@ import PrivateRouteForOther from "./PrivateRouteForOther";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import Gallery from "../Pages/Gallery/Gallery";
 import Services from "../Pages/Services/Services";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
 
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
