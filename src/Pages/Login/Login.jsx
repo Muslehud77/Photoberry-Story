@@ -8,7 +8,8 @@ import { AuthContext } from "../../ConetextProvider/ContextProvider";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import toast from "react-hot-toast";
 import { Helmet } from "react-helmet";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 
 
@@ -27,7 +28,10 @@ const [show, setShow] = useState(false);
 const [err,setErr] = useState(null);
 const {state} = useLocation();
 
-console.log(state);
+useEffect(() => {
+  Aos.init();
+}, []);
+
 
   imgs = images
 
@@ -80,7 +84,10 @@ const socialLogin = (media) => {
         <title>Photoberry | Login</title>
       </Helmet>
       <div>
-        <div className="max-w-md relative z-10 border py-10 px-10 md:px-12 mx-auto space-y-8 bg-white rounded-md">
+        <div
+          data-aos="zoom-in-down"
+          className="max-w-md relative z-10 border py-10 px-10 md:px-12 mx-auto space-y-8 bg-white rounded-md"
+        >
           <h2 className="font-semibold text-3xl">Login your account</h2>
           <hr />
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -161,7 +168,7 @@ const socialLogin = (media) => {
           </div>
         </div>
       </div>
-      <div className="relative z-10">
+      <div data-aos="zoom-in-up" className="relative z-10">
         <ShuffleGrid />
       </div>
       <img

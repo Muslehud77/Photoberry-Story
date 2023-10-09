@@ -1,16 +1,22 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
+ 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function ContactUs() {
   const [agreed, setAgreed] = useState(false);
+
+useEffect(() => {
+  Aos.init();
+}, []);
 
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
@@ -38,6 +44,7 @@ export default function ContactUs() {
         <p className="mt-2 text-lg leading-8 text-gray-600"></p>
       </div>
       <form
+        data-aos="zoom-out-down"
         action="#"
         method="POST"
         className="mx-auto mt-16 max-w-xl sm:mt-20"

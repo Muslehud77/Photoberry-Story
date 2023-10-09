@@ -1,15 +1,23 @@
 import { imageListClasses } from "@mui/material";
 import { useLoaderData } from "react-router-dom";
 import './gallery.css'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {RxCross1} from 'react-icons/rx'
 import logo from "../../Assets/Logo/Photoberry Golden 2.png";
 import { Helmet } from "react-helmet";
+import Aos from "aos";
+import "aos/dist/aos.css";
+ 
+
 
 const Gallery = () => {
     const gallery = useLoaderData()
    const [modal,setModal] = useState(false)
    const [imgUrl,setImgUrl] = useState('')
+
+useEffect(() => {
+  Aos.init();
+}, []);
 
     const getImg = (url) => {
         setImgUrl(url)
@@ -21,7 +29,7 @@ console.log(imgUrl)
         <Helmet>
           <title>Photoberry | Gallery</title>
         </Helmet>
-        <div className="pt-40 ">
+        <div data-aos="fade-up" className="pt-40 ">
           <div className="flex justify-center items-center">
             <div className="flex flex-col justify-center items-center">
               <img className="w-36 lg:w-52" src={logo} alt="" />
@@ -40,7 +48,12 @@ console.log(imgUrl)
         </div>
         <div className="gallery h-full pt-20">
           {gallery.map((g) => (
-            <div onClick={() => getImg(g.url)} className="pics" key={g.id}>
+            <div
+              data-aos="fade-up"
+              onClick={() => getImg(g.url)}
+              className="pics"
+              key={g.id}
+            >
               <img className="w-full" src={g.url} alt="" />
             </div>
           ))}

@@ -24,7 +24,7 @@ export default function Slider({ ev }) {
         className="mySwiper2 w-[350px]"
         autoplay={{
           delay: 2000,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
       >
         {ev.map((e) => (

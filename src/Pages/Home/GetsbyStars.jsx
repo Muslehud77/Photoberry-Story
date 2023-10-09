@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
@@ -11,6 +11,10 @@ import wedding6 from "../../Assets/wedding-8.jpg";
 import logo from '../../Assets/Logo/Photoberry Golden 2.png'
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -24,6 +28,13 @@ import {EffectFade, Autoplay, Pagination, Navigation } from "swiper/modules";
 
 
 export default function GetsbyStars() {
+
+  useEffect(()=>{
+    Aos.init();
+  },[])
+
+
+
   return (
     <div className="h-full">
       <div className=" bg-black bg-opacity-70 h-screen relative">
@@ -34,7 +45,7 @@ export default function GetsbyStars() {
         </div>
 
         <div className="flex justify-center h-full items-center">
-          <div className="-mt-52 md:-mt-32 lg:mt-0 absolute z-20">
+          <div data-aos='fade-up' className="-mt-52 md:-mt-32 lg:mt-0 absolute z-20">
             <img className="w-36 lg:w-52" src={logo} alt="" />
           </div>
         </div>
@@ -60,7 +71,7 @@ export default function GetsbyStars() {
                     alt=""
                   />
                 </div>
-                <div className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
+                <div data-aos='fade-up' className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
                   <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Your Dream Event, Our Expertise
                   </h1>
@@ -74,7 +85,7 @@ export default function GetsbyStars() {
                     alt=""
                   />
                 </div>
-                <div className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
+                <div data-aos='fade-up' className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
                   <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#F8D17C]] font-bold h-full font-vibes">
                     Turning Visions into Reality
                   </h1>
@@ -88,7 +99,7 @@ export default function GetsbyStars() {
                     alt=""
                   />
                 </div>
-                <div className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
+                <div data-aos='fade-up' className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
                   <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Crafting Memories, One Event at a Time
                   </h1>
@@ -102,7 +113,7 @@ export default function GetsbyStars() {
                     alt=""
                   />
                 </div>
-                <div className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
+                <div data-aos='fade-up' className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
                   <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Elevate Your Celebrations
                   </h1>
@@ -116,7 +127,7 @@ export default function GetsbyStars() {
                     alt=""
                   />
                 </div>
-                <div className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
+                <div data-aos='fade-up' className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
                   <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Exceptional Events, Extraordinary Memories
                   </h1>
@@ -130,7 +141,7 @@ export default function GetsbyStars() {
                     alt=""
                   />
                 </div>
-                <div className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
+                <div data-aos='fade-up' className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
                   <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Turning Moments into Masterpieces
                   </h1>

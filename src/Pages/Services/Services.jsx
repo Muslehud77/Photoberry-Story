@@ -1,17 +1,24 @@
 import { useLoaderData } from "react-router-dom";
 import logo from "../../Assets/Logo/Photoberry Golden 2.png";
 import CardForService from "./CardForService";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+ 
 
 
 
 const Services = () => {
 const events = useLoaderData()
 
+useEffect(() => {
+  Aos.init();
+}, []);
 console.log(events)
 
   return (
     <div className="bg-black">
-      <div className="pt-40 ">
+      <div data-aos="fade-up" className="pt-40 ">
         <div className="flex justify-center items-center">
           <div className="flex flex-col justify-center items-center">
             <img className="w-36 lg:w-52" src={logo} alt="" />
@@ -23,7 +30,11 @@ console.log(events)
       </div>
       <div className="container mx-auto space-y-5 md:space-y-0 md:grid grid-cols-2 gap-5 px-5">
         {events.slice(0, 6).map((ev) => (
-          <CardForService key={ev.id} ev={ev}></CardForService>
+          <CardForService
+          
+            key={ev.id}
+            ev={ev}
+          ></CardForService>
         ))}
       </div>
       <div className="flex justify-center items-center mt-5">

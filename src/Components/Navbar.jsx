@@ -1,4 +1,4 @@
-import { Fragment, useContext } from "react";
+import { Fragment, useContext, useEffect } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon,  XMarkIcon } from "@heroicons/react/24/outline";
 import avatar from '../Assets/user.png'
@@ -7,7 +7,9 @@ import logo3 from '../Assets/Logo/Photoberry White.png'
 import { NavLink, useLocation, useNavigate, useNavigation } from "react-router-dom";
 import { AuthContext } from "../ConetextProvider/ContextProvider";
 import toast from "react-hot-toast";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
+ 
 
 
 
@@ -18,12 +20,17 @@ function classNames(...classes) {
 export default function Navbar() {
   const navigate = useNavigate()
   const {user , logOut} = useContext(AuthContext)
-
+useEffect(() => {
+  Aos.init();
+}, []);
 
   const navigation = (
     <>
       <div className="space-x-2">
         <NavLink
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
           to="/"
           className={({ isActive, isPending }) =>
             isActive
@@ -44,6 +51,9 @@ export default function Navbar() {
           Home
         </NavLink>
         <NavLink
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
           to="/services"
           className={({ isActive, isPending }) =>
             isActive
@@ -64,6 +74,9 @@ export default function Navbar() {
           Services
         </NavLink>
         <NavLink
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
           to="/gallery"
           className={({ isActive, isPending }) =>
             isActive
@@ -84,6 +97,9 @@ export default function Navbar() {
           Gallery
         </NavLink>
         <NavLink
+          data-aos="fade-up"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
           to="/contact"
           className={({ isActive, isPending }) =>
             isActive
@@ -117,12 +133,14 @@ navigate('/')
 
 }
 
+
+
 const {pathname} = useLocation()
 
 
 
   return (
-    <div className="relative ">
+    <div data-aos="fade-down" className="relative z-50">
       <Disclosure as="nav" className={`absolute z-20 w-full`}>
         {({ open }) => (
           <>

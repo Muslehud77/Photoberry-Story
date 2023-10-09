@@ -9,7 +9,9 @@ import { updateProfile } from "firebase/auth";
 import {AiFillEyeInvisible, AiFillEye} from 'react-icons/ai'
 import toast from "react-hot-toast";
 import { Helmet } from "react-helmet";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
+ 
 
 let imgs = [];
 const specialCharacter = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
@@ -22,6 +24,10 @@ const { state } = useLocation();
 const { emailSignUp , googleSignIn , facebookSignIn } = useContext(AuthContext);
 const [show,setShow] = useState(false)
 const [err,setErr] = useState(null);
+
+useEffect(() => {
+  Aos.init();
+}, []);
 
 
   const handleSubmit = (e) => {
@@ -97,7 +103,10 @@ const socialSignUp = (media) => {
         <title>Photoberry | Register</title>
       </Helmet>
       <div>
-        <div className="max-w-md relative z-10  py-10 px-12 mx-auto space-y-8  bg-black text-white bg-opacity-50 backdrop-blur-md rounded-md">
+        <div
+          data-aos="zoom-out-up"
+          className="max-w-md relative z-10  py-10 px-12 mx-auto space-y-8  bg-black text-white bg-opacity-50 backdrop-blur-md rounded-md"
+        >
           <h2 className="font-semibold text-3xl">Register Account</h2>
           <hr />
           <form onSubmit={handleSubmit} className="space-y-4">

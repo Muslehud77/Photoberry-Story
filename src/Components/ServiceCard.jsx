@@ -2,10 +2,17 @@
 import PropTypes from 'prop-types';
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import { Link } from 'react-router-dom';
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
+ 
 
 
 
 const ServiceCard = ({event}) => {
+useEffect(() => {
+  Aos.init();
+}, []);
 
 
 
@@ -20,7 +27,11 @@ const ServiceCard = ({event}) => {
             className={`card card-compact w-96  bg-gradient-to-r from-[#F8D17C] to-[#D29842] shadow-xl`}
           >
             <figure>
-              <img src={thumbnail_img2} alt={category} />
+              <img
+                src={thumbnail_img2}
+                className="h-72 w-full object-cover"
+                alt={category}
+              />
             </figure>
             <div className="card-body">
               <h4 className="text-left capitalize p-2 font-semibold bg-gray-200 bg-opacity-50 rounded-xl ">
