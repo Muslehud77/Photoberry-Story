@@ -124,6 +124,7 @@ const socialLogin = (media) => {
             <span>
               Don't Have An Account ?{" "}
               <Link
+                state={state}
                 className="hover:font-semibold text-blue-700"
                 to="/register"
               >

@@ -6,6 +6,7 @@ import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Details from "../Pages/Details/Details";
 import PrivateRouteForOther from "./PrivateRouteForOther";
+import ContactUs from "../Pages/ContactUs/ContactUs";
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,15 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <Register></Register>
           </PrivateRoute>
+        ),
+      },
+      {
+        path: "/contact",
+        loader: () => fetch("/images.json"),
+        element: (
+          <PrivateRouteForOther>
+           <ContactUs></ContactUs>
+          </PrivateRouteForOther>
         ),
       },
       {

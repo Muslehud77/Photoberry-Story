@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useContext, useEffect, useRef, useState } from "react";
 import { BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import bg from "../../Assets/Backgounds/blob-scene-haikei (1).svg";
 import { AuthContext } from "../../ConetextProvider/ContextProvider";
 import { updateProfile } from "firebase/auth";
@@ -17,7 +17,7 @@ const Register = () => {
 const images = useLoaderData();
 imgs = images;
 const navigate = useNavigate()
-
+const { state } = useLocation();
 const { emailSignUp , googleSignIn , facebookSignIn } = useContext(AuthContext);
 const [show,setShow] = useState(false)
 const [err,setErr] = useState(null);
@@ -61,7 +61,7 @@ const [err,setErr] = useState(null);
        updateProfile(res.user, {
         displayName,photoURL
        })
-       navigate('/')
+        navigate(state ? state : "/");
         toast.success(`We are honored ${displayName}!`, {
           position: "bottom-center",
         });
@@ -78,7 +78,7 @@ const socialSignUp = (media) => {
     media()
     .then(res=> {
         console.log(res.user)
-        navigate("/")
+         navigate(state ? state : "/");
          
           toast.success(`We are honored ${res.user.displayName}!`, {
             position: "bottom-center",

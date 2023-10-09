@@ -6,19 +6,21 @@ const PrivateRouteForOther = ({children}) => {
     const {user,loading} = useContext(AuthContext)
     const {pathname} = useLocation()
     console.log(pathname);
-     if (loading) {
-       return (
-         <div className="h-screen flex justify-center items-center">
-           <progress className="progress w-56"></progress>
-         </div>
-       );
-     }
+
+
+    
 
     if(user){
         return children
     }
 
-
+ if (loading) {
+   return (
+     <div className="h-screen flex justify-center items-center">
+       <progress className="progress w-56"></progress>
+     </div>
+   );
+ }
 
 
 

@@ -9,24 +9,7 @@ import { AuthContext } from "../ConetextProvider/ContextProvider";
 import toast from "react-hot-toast";
 
 
-const navigation = (
-  <>
-    <div className="space-x-2">
-      <NavLink
-        to="/"
-        className={({ isActive, isPending }) =>
-          isActive
-            ? "btn bg-opacity-20 duration-500 text-white border-none hover:text-black btn-sm capitalize"
-            : isPending
-            ? "btn btn-ghost duration-500 text-white btn-sm capitalize"
-            : "btn btn-ghost text-white btn-sm capitalize"
-        }
-      >
-        Home
-      </NavLink>
-    </div>
-  </>
-);
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -36,6 +19,53 @@ export default function Navbar() {
   const navigate = useNavigate()
   const {user , logOut} = useContext(AuthContext)
 
+
+  const navigation = (
+    <>
+      <div className="space-x-2">
+        <NavLink
+          to="/"
+          className={({ isActive, isPending }) =>
+            isActive
+              ? `btn bg-yellow-50 duration-500 ${
+                  pathname === "/contact"
+                    ? "text-black"
+                    : "text-white bg-opacity-30"
+                } border-none hover:text-black btn-sm capitalize`
+              : isPending
+              ? `btn btn-ghost ${
+                  pathname === "/contact" ? "text-black" : "text-white"
+                } duration-500 text-white btn-sm capitalize`
+              : `btn btn-ghost ${
+                  pathname === "/contact" ? "text-black" : "text-white"
+                } text-white duration-500 btn-sm capitalize`
+          }
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive, isPending }) =>
+            isActive
+              ? `btn bg-yellow-50 duration-500 ${
+                  pathname === "/contact"
+                    ? "text-black"
+                    : "text-white bg-opacity-30"
+                } border-none hover:text-black btn-sm capitalize`
+              : isPending
+              ? `btn btn-ghost ${
+                  pathname === "/contact" ? "text-black" : "text-white"
+                } duration-500 text-white btn-sm capitalize`
+              : `btn btn-ghost ${
+                  pathname === "/contact" ? "text-black" : "text-white"
+                } text-white btn-sm capitalize`
+          }
+        >
+          Contact
+        </NavLink>
+      </div>
+    </>
+  );
 
 
 const signOut = () => {
