@@ -4,7 +4,7 @@ import { Bars3Icon,  XMarkIcon } from "@heroicons/react/24/outline";
 import avatar from '../Assets/user.png'
 import logo2 from '../Assets/Logo/Photoberry.png'
 import logo3 from '../Assets/Logo/Photoberry White.png'
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate, useNavigation } from "react-router-dom";
 import { AuthContext } from "../ConetextProvider/ContextProvider";
 import toast from "react-hot-toast";
 
@@ -33,8 +33,9 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
-
+  const navigate = useNavigate()
   const {user , logOut} = useContext(AuthContext)
+
 
 
 const signOut = () => {
@@ -42,6 +43,8 @@ const signOut = () => {
   toast.success(`Logged Out`, {
   position: "bottom-center"
 })
+navigate('/')
+
 }
 
 const {pathname} = useLocation()
@@ -68,7 +71,10 @@ const {pathname} = useLocation()
                   </Disclosure.Button>
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                  <div className="flex flex-shrink-0 items-center">
+                  <div
+                    onClick={()=>navigate('/')}
+                    className="flex hover:cursor-pointer flex-shrink-0 items-center"
+                  >
                     <img
                       className="h-12 duration-500 w-auto"
                       src={`${pathname === "/register" ? logo3 : logo2}`}
