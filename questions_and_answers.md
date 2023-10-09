@@ -71,7 +71,7 @@ console.log(food);
 
 #### Answer: A
 
-<i>The answer is A because we consoled food and the foods are matching with option A.</i>
+<i>The answer is A because we consoled foods and the foods are matching with option A.</i>
 
 </p>
 </details>
@@ -128,3 +128,4 @@ console.log(count);
 
 </p>
 </details>
+
