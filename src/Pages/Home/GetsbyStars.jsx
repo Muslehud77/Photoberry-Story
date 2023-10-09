@@ -45,7 +45,7 @@ export default function GetsbyStars() {
         </div>
 
         <div className="flex justify-center h-full items-center">
-          <div data-aos='fade-up' className="-mt-52 md:-mt-32 lg:mt-0 absolute z-20">
+          <div className="-mt-52 md:-mt-32 lg:mt-0 absolute z-20">
             <img className="w-36 lg:w-52" src={logo} alt="" />
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function GetsbyStars() {
                     alt=""
                   />
                 </div>
-                <div data-aos='fade-up' className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
+                <div className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
                   <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Your Dream Event, Our Expertise
                   </h1>
@@ -85,7 +85,7 @@ export default function GetsbyStars() {
                     alt=""
                   />
                 </div>
-                <div data-aos='fade-up' className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
+                <div className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
                   <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#F8D17C]] font-bold h-full font-vibes">
                     Turning Visions into Reality
                   </h1>
@@ -99,7 +99,7 @@ export default function GetsbyStars() {
                     alt=""
                   />
                 </div>
-                <div data-aos='fade-up' className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
+                <div className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
                   <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Crafting Memories, One Event at a Time
                   </h1>
@@ -113,7 +113,7 @@ export default function GetsbyStars() {
                     alt=""
                   />
                 </div>
-                <div data-aos='fade-up' className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
+                <div className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
                   <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Elevate Your Celebrations
                   </h1>
@@ -127,7 +127,7 @@ export default function GetsbyStars() {
                     alt=""
                   />
                 </div>
-                <div data-aos='fade-up' className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
+                <div className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
                   <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Exceptional Events, Extraordinary Memories
                   </h1>
@@ -141,7 +141,7 @@ export default function GetsbyStars() {
                     alt=""
                   />
                 </div>
-                <div data-aos='fade-up' className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
+                <div className=" bottom-24 lg:bottom-24 md:bottom-0 w-full text-center absolute">
                   <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Turning Moments into Masterpieces
                   </h1>
