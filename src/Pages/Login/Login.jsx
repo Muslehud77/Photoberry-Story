@@ -7,6 +7,7 @@ import bg from "../../Assets/Backgounds/blob-scene-haikei (2).svg";
 import { AuthContext } from "../../ConetextProvider/ContextProvider";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 
 
@@ -75,6 +76,9 @@ const socialLogin = (media) => {
 
   return (
     <section className="w-full relative bg-black bg-opacity-60 px-8 py-20 grid grid-cols-1 md:grid-cols-2 items-center gap-8 ">
+      <Helmet>
+        <title>Photoberry | Login</title>
+      </Helmet>
       <div>
         <div className="max-w-md relative z-10 border py-10 px-10 md:px-12 mx-auto space-y-8 bg-white rounded-md">
           <h2 className="font-semibold text-3xl">Login your account</h2>

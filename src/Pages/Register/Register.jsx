@@ -8,6 +8,7 @@ import { AuthContext } from "../../ConetextProvider/ContextProvider";
 import { updateProfile } from "firebase/auth";
 import {AiFillEyeInvisible, AiFillEye} from 'react-icons/ai'
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 
 let imgs = [];
@@ -92,6 +93,9 @@ const socialSignUp = (media) => {
 
   return (
     <section className="relative bg-black  bg-opacity-60 py-20">
+      <Helmet>
+        <title>Photoberry | Register</title>
+      </Helmet>
       <div>
         <div className="max-w-md relative z-10  py-10 px-12 mx-auto space-y-8  bg-black text-white bg-opacity-50 backdrop-blur-md rounded-md">
           <h2 className="font-semibold text-3xl">Register Account</h2>
@@ -125,14 +129,16 @@ const socialSignUp = (media) => {
               <input
                 id="password"
                 required
-                type={`${show ? 'text' : 'password'}`}
+                type={`${show ? "text" : "password"}`}
                 name="password"
                 placeholder="Password must be at-least 6 characters"
                 className="input input-bordered w-full bg-gray-100 text-black"
               />
               <div
                 className="hover:cursor-pointer absolute right-3 bottom-3 text-black text-xl"
-                onClick={() => {setShow(!show)}}
+                onClick={() => {
+                  setShow(!show);
+                }}
               >
                 {!show ? <AiFillEyeInvisible /> : <AiFillEye />}
               </div>

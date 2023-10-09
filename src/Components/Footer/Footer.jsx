@@ -9,12 +9,14 @@ const Footer = () => {
           <aside>
             <img src={logo} className="w-20" alt="" />
             <p>
-              <span className="font-semibold ">Photoberry Story</span>
+              <span className="font-semibold text-white">Photoberry Story</span>
               <br />
               Turning Moments into Memories
+              <br />
+              <span>Musleh © 2023 - All right reserved</span>
             </p>
           </aside>
-          <nav className='-mr-28'>
+          <nav className="-mr-28 mt-8">
             <header className="footer-title">Find Us On</header>
             <div className="grid grid-flow-col gap-4">
               <a href="" className="text-2xl">

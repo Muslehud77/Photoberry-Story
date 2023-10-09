@@ -7,6 +7,7 @@ import Scroller from './Scroller';
 import AboutUs from './AboutUs';
 import WorkFlow from './WorkFlow';
 import Services from './Services';
+import { Helmet } from 'react-helmet';
 
 
 const Home = () => {
@@ -17,6 +18,10 @@ const Home = () => {
 
     return (
       <div>
+        <Helmet>
+          <title>Photoberry | Home</title>
+        
+        </Helmet>
         <GetsbyStars></GetsbyStars>
         <AboutUs></AboutUs>
 

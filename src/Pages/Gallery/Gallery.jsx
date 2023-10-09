@@ -4,6 +4,8 @@ import './gallery.css'
 import { useState } from "react";
 import {RxCross1} from 'react-icons/rx'
 import logo from "../../Assets/Logo/Photoberry Golden 2.png";
+import { Helmet } from "react-helmet";
+
 const Gallery = () => {
     const gallery = useLoaderData()
    const [modal,setModal] = useState(false)
@@ -16,6 +18,9 @@ const Gallery = () => {
 console.log(imgUrl)
     return (
       <div className="bg-black pb-10">
+        <Helmet>
+          <title>Photoberry | Gallery</title>
+        </Helmet>
         <div className="pt-40 ">
           <div className="flex justify-center items-center">
             <div className="flex flex-col justify-center items-center">

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -13,6 +14,9 @@ export default function ContactUs() {
 
   return (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <Helmet>
+        <title>Photoberry | Contact</title>
+      </Helmet>
       <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
@@ -31,9 +35,7 @@ export default function ContactUs() {
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Contact Us
         </h2>
-        <p className="mt-2 text-lg leading-8 text-gray-600">
-         
-        </p>
+        <p className="mt-2 text-lg leading-8 text-gray-600"></p>
       </div>
       <form
         action="#"
@@ -75,7 +77,7 @@ export default function ContactUs() {
               />
             </div>
           </div>
-          
+
           <div className="sm:col-span-2">
             <label
               htmlFor="email"
@@ -182,10 +184,7 @@ export default function ContactUs() {
           </Switch.Group>
         </div>
         <div className="mt-10">
-          <Link
-           to='/'
-            className="btn w-full btn-outline"
-          >
+          <Link to="/" className="btn w-full btn-outline">
             Let's talk
           </Link>
         </div>

@@ -142,7 +142,7 @@ const {pathname} = useLocation()
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div
-                    onClick={()=>navigate('/')}
+                    onClick={() => navigate("/")}
                     className="flex hover:cursor-pointer flex-shrink-0 items-center"
                   >
                     <img
@@ -235,7 +235,88 @@ const {pathname} = useLocation()
             </div>
 
             <Disclosure.Panel className="sm:hidden">
-              <div className="">{navigation}</div>
+              <div className=" flex flex-col rounded-lg bg-black bg-opacity-80 z-20">
+                <NavLink
+                  to="/"
+                  className={({ isActive, isPending }) =>
+                    isActive
+                      ? `btn bg-yellow-50 duration-500 ${
+                          pathname === "/contact"
+                            ? "text-black"
+                            : "text-white bg-opacity-30"
+                        } border-none hover:text-black btn-sm capitalize`
+                      : isPending
+                      ? `btn btn-ghost ${
+                          pathname === "/contact" ? "text-black" : "text-white"
+                        } duration-500 text-white btn-sm capitalize`
+                      : `btn btn-ghost ${
+                          pathname === "/contact" ? "text-black" : "text-white"
+                        } text-white duration-500 btn-sm capitalize`
+                  }
+                >
+                  Home
+                </NavLink>
+                <NavLink
+                  to="/services"
+                  className={({ isActive, isPending }) =>
+                    isActive
+                      ? `btn bg-yellow-50 duration-500 ${
+                          pathname === "/contact"
+                            ? "text-black"
+                            : "text-white bg-opacity-30"
+                        } border-none hover:text-black btn-sm capitalize`
+                      : isPending
+                      ? `btn btn-ghost ${
+                          pathname === "/contact" ? "text-black" : "text-white"
+                        } duration-500 text-white btn-sm capitalize`
+                      : `btn btn-ghost ${
+                          pathname === "/contact" ? "text-black" : "text-white"
+                        } text-white duration-500 btn-sm capitalize`
+                  }
+                >
+                  Services
+                </NavLink>
+                <NavLink
+                  to="/gallery"
+                  className={({ isActive, isPending }) =>
+                    isActive
+                      ? `btn bg-yellow-50 duration-500 ${
+                          pathname === "/contact"
+                            ? "text-black"
+                            : "text-white bg-opacity-30"
+                        } border-none hover:text-black btn-sm capitalize`
+                      : isPending
+                      ? `btn btn-ghost ${
+                          pathname === "/contact" ? "text-black" : "text-white"
+                        } duration-500 text-white btn-sm capitalize`
+                      : `btn btn-ghost ${
+                          pathname === "/contact" ? "text-black" : "text-white"
+                        } text-white btn-sm capitalize`
+                  }
+                >
+                  Gallery
+                </NavLink>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive, isPending }) =>
+                    isActive
+                      ? `btn bg-yellow-50 duration-500 ${
+                          pathname === "/contact"
+                            ? "text-black"
+                            : "text-white bg-opacity-30"
+                        } border-none hover:text-black btn-sm capitalize`
+                      : isPending
+                      ? `btn btn-ghost ${
+                          pathname === "/contact" ? "text-black" : "text-white"
+                        } duration-500 text-white btn-sm capitalize`
+                      : `btn btn-ghost ${
+                          pathname === "/contact" ? "text-black" : "text-white"
+                        } text-white btn-sm capitalize`
+                  }
+                >
+                  Contact
+                </NavLink>
+              </div>
             </Disclosure.Panel>
           </>
         )}
