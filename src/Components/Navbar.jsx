@@ -6,6 +6,7 @@ import logo2 from '../Assets/Logo/Photoberry.png'
 import logo3 from '../Assets/Logo/Photoberry White.png'
 import { NavLink, useLocation } from "react-router-dom";
 import { AuthContext } from "../ConetextProvider/ContextProvider";
+import toast from "react-hot-toast";
 
 
 const navigation = (
@@ -35,6 +36,13 @@ export default function Navbar() {
 
   const {user , logOut} = useContext(AuthContext)
 
+
+const signOut = () => {
+  logOut()
+  toast.success(`Logged Out`, {
+  position: "bottom-center"
+})
+}
 
 const {pathname} = useLocation()
 
@@ -113,7 +121,7 @@ const {pathname} = useLocation()
                             <Menu.Item>
                               {({ active }) => (
                                 <a
-                                  onClick={() => logOut()}
+                                  onClick={signOut}
                                   className={classNames(
                                     active ? "bg-gray-100" : "",
                                     "block px-4 py-2 text-sm text-gray-700 hover:cursor-pointer"

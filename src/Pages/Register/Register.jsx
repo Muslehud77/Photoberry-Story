@@ -7,6 +7,7 @@ import bg from "../../Assets/Backgounds/blob-scene-haikei (1).svg";
 import { AuthContext } from "../../ConetextProvider/ContextProvider";
 import { updateProfile } from "firebase/auth";
 import {AiFillEyeInvisible, AiFillEye} from 'react-icons/ai'
+import toast from "react-hot-toast";
 
 
 let imgs = [];
@@ -61,9 +62,13 @@ const [err,setErr] = useState(null);
         displayName,photoURL
        })
        navigate('/')
+        toast.success(`We are honored ${displayName}!`, {
+          position: "bottom-center",
+        });
     })
     .catch(err=> {
-        console.log(err)
+        console.log(err.message);
+        setErr(`${err.message.slice(22, 42)}!`);
     })
 
 
@@ -74,6 +79,10 @@ const socialSignUp = (media) => {
     .then(res=> {
         console.log(res.user)
         navigate("/")
+         
+          toast.success(`We are honored ${res.user.displayName}!`, {
+            position: "bottom-center",
+          });
     })
     .catch(err => {
         console.log(err)
@@ -125,7 +134,7 @@ const socialSignUp = (media) => {
                 className="hover:cursor-pointer absolute right-3 bottom-3 text-black text-xl"
                 onClick={() => {setShow(!show)}}
               >
-                {show ? <AiFillEyeInvisible /> : <AiFillEye />}
+                {!show ? <AiFillEyeInvisible /> : <AiFillEye />}
               </div>
             </div>
             {err && (

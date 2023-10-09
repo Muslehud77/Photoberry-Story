@@ -132,7 +132,7 @@ function Item({ index, position, scale, c = new THREE.Color(), ...props }) {
   );
 }
 
-function Items({ w = 0.7, gap = 0.15 }) {
+function Items({ w = 1.5, gap = 0.10 }) {
   const { urls } = useSnapshot(state);
   const { width } = useThree((state) => state.viewport);
   const xW = w + gap;
@@ -151,37 +151,6 @@ function Items({ w = 0.7, gap = 0.15 }) {
     </ScrollControls>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   return (

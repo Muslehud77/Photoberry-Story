@@ -6,6 +6,8 @@ import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import bg from "../../Assets/Backgounds/blob-scene-haikei (2).svg";
 import { AuthContext } from "../../ConetextProvider/ContextProvider";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+import toast from "react-hot-toast";
+
 
 
 
@@ -21,14 +23,14 @@ const Login = () => {
 const { emailSignIn, googleSignIn, facebookSignIn } = useContext(AuthContext);
 const navigate = useNavigate()
 const [show, setShow] = useState(false);
-
+const [err,setErr] = useState(null);
 
 
   imgs = images
 
 const handleSubmit = (e) => {
   e.preventDefault();
-
+setErr(null)
   // const email = e.target.email.value;
   // const password = e.target.password.value;
 
@@ -40,10 +42,15 @@ const handleSubmit = (e) => {
   emailSignIn(email, password)
   .then(res=> {
     console.log(res.user)
+   toast.success(`Welcome back ${res.user.displayName}!`, {
+     position: "bottom-center",
+   });
     navigate('/')
   })
   .catch(err=> {
-    console.log(err)
+    console.log(err.message);
+    setErr('email or password does not match!')
+
   })
 
 };
@@ -52,10 +59,13 @@ const socialLogin = (media) => {
   media()
   .then(res=>{
     console.log(res.user)
+     toast.success(`Welcome back ${res.user.displayName}!`, {
+  position: "bottom-center"
+});
      navigate("/");
   })
  .catch(err=> {
-  console.log(err)
+  console.log(err.message)
  })
 }
 
@@ -95,7 +105,12 @@ const socialLogin = (media) => {
                 {!show ? <AiFillEyeInvisible /> : <AiFillEye />}
               </div>
             </div>
-            <div className="space-y-8">
+            <div className="space-y-2">
+              {err && (
+                <p className="capitalize text-red-500 font-serif  rounded-xl">
+                  {err}
+                </p>
+              )}
               <input
                 type="submit"
                 value="login"
