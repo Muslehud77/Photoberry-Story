@@ -44,6 +44,26 @@ export default function Navbar() {
           Home
         </NavLink>
         <NavLink
+          to="/gallery"
+          className={({ isActive, isPending }) =>
+            isActive
+              ? `btn bg-yellow-50 duration-500 ${
+                  pathname === "/contact"
+                    ? "text-black"
+                    : "text-white bg-opacity-30"
+                } border-none hover:text-black btn-sm capitalize`
+              : isPending
+              ? `btn btn-ghost ${
+                  pathname === "/contact" ? "text-black" : "text-white"
+                } duration-500 text-white btn-sm capitalize`
+              : `btn btn-ghost ${
+                  pathname === "/contact" ? "text-black" : "text-white"
+                } text-white btn-sm capitalize`
+          }
+        >
+          Gallery
+        </NavLink>
+        <NavLink
           to="/contact"
           className={({ isActive, isPending }) =>
             isActive

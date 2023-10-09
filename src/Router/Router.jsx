@@ -7,6 +7,7 @@ import PrivateRoute from "./PrivateRoute";
 import Details from "../Pages/Details/Details";
 import PrivateRouteForOther from "./PrivateRouteForOther";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import Gallery from "../Pages/Gallery/Gallery";
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,15 @@ const router = createBrowserRouter([
         element: (
           <PrivateRouteForOther>
            <ContactUs></ContactUs>
+          </PrivateRouteForOther>
+        ),
+      },
+      {
+        path: "/gallery",
+        loader: () => fetch("/gallery.json"),
+        element: (
+          <PrivateRouteForOther>
+           <Gallery></Gallery>
           </PrivateRouteForOther>
         ),
       },
