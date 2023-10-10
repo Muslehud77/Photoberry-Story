@@ -51,7 +51,7 @@ const Services = ({ev}) => {
           }}
         >
           {ev.map((event) => (
-            <SwiperSlide className=" " key={event.id}>
+            <SwiperSlide className="swiper-slide000" key={event.id}>
               <ServiceCard event={event}></ServiceCard>
             </SwiperSlide>
           ))}
