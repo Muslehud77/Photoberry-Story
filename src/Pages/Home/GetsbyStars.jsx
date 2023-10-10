@@ -83,7 +83,7 @@ export default function GetsbyStars() {
                   />
                 </div>
                 <div className=" bottom-0 lg:bottom-24 md:bottom-0 w-full text-center absolute">
-                  <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#F8D17C]] font-bold h-full font-vibes">
+                  <h1 className="text-7xl p-5 text-transparent bg-clip-text bg-gradient-to-b from-[#F8D17C] to-[#D29842] font-bold h-full font-vibes">
                     Turning Visions into Reality
                   </h1>
                 </div>
