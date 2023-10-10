@@ -32,11 +32,11 @@ const Services = ({ev}) => {
           </h1>
         </div>
         <Swiper
-          className="swiper_container00"
+          className="swiper_container00 bg-opacity-80 bg-black"
           effect={"coverflow"}
           centeredSlides={true}
           loop={true}
-          slidesPerView={5}
+          slidesPerView={3}
           mousewheel={false}
           autoplay={{
             delay: 2000,
@@ -52,7 +52,7 @@ const Services = ({ev}) => {
         >
           {ev.map((event) => (
             <SwiperSlide
-              className=".swiper-slide00 drop-shadow-none"
+              className="rounded-2xl drop-shadow-none"
               key={event.id}
             >
               <ServiceCard event={event}></ServiceCard>

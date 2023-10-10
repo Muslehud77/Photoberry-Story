@@ -21,18 +21,20 @@ useEffect(() => {
 
 
     return (
-      <div>
+      <div className="">
         <div className="hover:cursor-grab">
           <div
-            className={`card card-compact w-96  bg-gradient-to-r from-[#F8D17C] to-[#D29842] shadow-xl`}
+            className={`card card-compact bg-gradient-to-r from-[#F8D17C] to-[#D29842] shadow-xl`}
           >
-            <figure>
-              <img
-                src={thumbnail_img2}
-                className="h-72 w-full object-cover"
-                alt={category}
-              />
-            </figure>
+            <div className=''>
+              <figure>
+                <img
+                  src={thumbnail_img2}
+                  className="h-72 md:h-96 object-cover"
+                  alt={category}
+                />
+              </figure>
+            </div>
             <div className="card-body">
               <h4 className="text-left capitalize p-2 font-semibold bg-gray-200 bg-opacity-50 rounded-xl ">
                 {category}

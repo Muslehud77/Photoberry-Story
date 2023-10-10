@@ -1,5 +1,6 @@
 .swiper_container00 {
   height: auto;
+  width: auto;
   padding: 2rem 0;
   position: relative;
 }
@@ -19,10 +20,7 @@
     width: 28rem !important;
     height: 36rem !important;
   }
-  .swiper-slide00 img {
-    width: 28rem !important;
-    height: 36rem !important;
-  }
+
 }
 
 .swiper-slide00 img {
