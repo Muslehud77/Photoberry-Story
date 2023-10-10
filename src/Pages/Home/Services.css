@@ -30,6 +30,11 @@
   object-fit: cover;
 }
 
+.swiper-slide{
+  border-radius: 2rem !important;
+  
+}
+
 .swiper-slide00-shadow-left,
 .swiper-slide00-shadow-right {
   display: none;

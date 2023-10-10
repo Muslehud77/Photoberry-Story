@@ -28,7 +28,7 @@ export default function Slider({ ev }) {
         }}
       >
         {ev.map((e) => (
-          <SwiperSlide key={e.id} className="swiper-slide100">
+          <SwiperSlide key={e.id} className="swiper-slide100 rounded-xl">
             <img className="" src={e.thumbnail_img} alt="" />
             <h4 className="absolute text-3xl shadow-sm p-2 w-full shadow-black font-extrabold text-stroke-3 text-yellow-500 bottom-10 rounded bg-black bg-opacity-50">
               {e.title_sm}

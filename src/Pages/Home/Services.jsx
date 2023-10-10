@@ -51,10 +51,7 @@ const Services = ({ev}) => {
           }}
         >
           {ev.map((event) => (
-            <SwiperSlide
-              className="rounded-2xl drop-shadow-none"
-              key={event.id}
-            >
+            <SwiperSlide className=" " key={event.id}>
               <ServiceCard event={event}></ServiceCard>
             </SwiperSlide>
           ))}
