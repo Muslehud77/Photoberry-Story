@@ -67,7 +67,7 @@ const WorkFlow = ({ev}) => {
                 </div>
               </div>
             </div>
-            <div data-aos="fade-up-left" className="col-span-2">
+            <div className="col-span-2">
               <Slider ev={ev}></Slider>
             </div>
           </div>

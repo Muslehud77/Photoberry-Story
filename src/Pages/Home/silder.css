@@ -1,6 +1,6 @@
 
 .mySwiper2{
-     width: 350px;
+     width: 320px;
   height: 450px;
 }
 
@@ -10,7 +10,6 @@
   justify-content: center;
   border-radius: 18px;
   font-size: 22px;
-
   position: relative;
 }
 .text-stroke-3 {
@@ -21,7 +20,8 @@
 
 @media (max-width: 500px) {
 .mySwiper2{
-     width: 220px;
-  height: 350px;
+
+     width: 200px;
+  height: 300px;
 }
 }

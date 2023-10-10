@@ -21,7 +21,7 @@ export default function Slider({ ev }) {
         effect={"cards"}
         mousewheel={true}
         modules={[EffectCards, Mousewheel, Autoplay]}
-        className="mySwiper2 w-[350px]"
+        className="mySwiper2 "
         autoplay={{
           delay: 2000,
           disableOnInteraction: true,

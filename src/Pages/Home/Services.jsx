@@ -9,7 +9,7 @@ import 'swiper/css'
 import "swiper/css/pagination"
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/navigation'
-
+import './services.css';
 
 
 import {
@@ -32,7 +32,7 @@ const Services = ({ev}) => {
           </h1>
         </div>
         <Swiper
-          className=""
+          className="swiper_container00"
           effect={"coverflow"}
           centeredSlides={true}
           loop={true}
@@ -40,7 +40,7 @@ const Services = ({ev}) => {
           mousewheel={false}
           autoplay={{
             delay: 2000,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
           }}
           modules={[Mousewheel, EffectCoverflow, Autoplay]}
           coverflowEffect={{
@@ -51,7 +51,10 @@ const Services = ({ev}) => {
           }}
         >
           {ev.map((event) => (
-            <SwiperSlide className=".swiper-slide00" key={event.id}>
+            <SwiperSlide
+              className=".swiper-slide00 drop-shadow-none"
+              key={event.id}
+            >
               <ServiceCard event={event}></ServiceCard>
             </SwiperSlide>
           ))}
