@@ -40,10 +40,10 @@ useEffect(() => {
               : isPending
               ? `btn btn-ghost ${
                   pathname === "/contact" ? "text-black" : "text-white"
-                } duration-500 text-white btn-sm capitalize`
+                } duration-500 btn-sm capitalize`
               : `btn btn-ghost ${
                   pathname === "/contact" ? "text-black" : "text-white"
-                } text-white duration-500 btn-sm capitalize`
+                } duration-500 btn-sm capitalize`
           }
         >
           Home
@@ -61,10 +61,10 @@ useEffect(() => {
               : isPending
               ? `btn btn-ghost ${
                   pathname === "/contact" ? "text-black" : "text-white"
-                } duration-500 text-white btn-sm capitalize`
+                } duration-500 btn-sm capitalize`
               : `btn btn-ghost ${
                   pathname === "/contact" ? "text-black" : "text-white"
-                } text-white duration-500 btn-sm capitalize`
+                } duration-500 btn-sm capitalize`
           }
         >
           Services
@@ -82,10 +82,10 @@ useEffect(() => {
               : isPending
               ? `btn btn-ghost ${
                   pathname === "/contact" ? "text-black" : "text-white"
-                } duration-500 text-white btn-sm capitalize`
+                } duration-500 btn-sm capitalize`
               : `btn btn-ghost ${
                   pathname === "/contact" ? "text-black" : "text-white"
-                } text-white btn-sm capitalize`
+                } btn-sm capitalize`
           }
         >
           Gallery
@@ -103,10 +103,10 @@ useEffect(() => {
               : isPending
               ? `btn btn-ghost ${
                   pathname === "/contact" ? "text-black" : "text-white"
-                } duration-500 text-white btn-sm capitalize`
+                } duration-500 btn-sm capitalize`
               : `btn btn-ghost ${
                   pathname === "/contact" ? "text-black" : "text-white"
-                } text-white btn-sm capitalize`
+                } btn-sm capitalize`
           }
         >
           Contact
