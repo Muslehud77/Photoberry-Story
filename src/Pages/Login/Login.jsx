@@ -87,7 +87,7 @@ const socialLogin = (media) => {
         <div className="">
           <div
             data-aos="zoom-in-down"
-            className="max-w-md relative z-10 border py-10 px-10 md:px-12 mx-auto space-y-8 bg-white rounded-md"
+            className="max-w-md relative z-10 border py-8 md:py-10 px-5 md:px-12 mx-auto space-y-8 bg-white rounded-md"
           >
             <h2 className="font-semibold text-3xl">Login your account</h2>
             <hr />
