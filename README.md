@@ -1,6 +1,4 @@
 
-[Live Website Link Netlify](https://photoberry-stories.netlify.app)
-
 
 [Live Website Link Firebase](https://photoberry-events.web.app/)
 
